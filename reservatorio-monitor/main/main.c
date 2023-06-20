@@ -198,7 +198,7 @@ void turn_on_water_pump_task(void *ignore)
         }
         else
         {
-            if (waterPercentage < 10)
+            if (waterPercentage < storageCapacityLimit)
             {
                 ESP_LOGW(HCSR04_TAG, "Bomba acionada!");
                 turn_on = 0;
